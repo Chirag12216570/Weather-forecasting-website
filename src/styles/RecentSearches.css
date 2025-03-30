@@ -1,0 +1,95 @@
+/* Recent Searches Container */
+.recent-searches-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-top: 20px;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding-bottom: 5px;
+    max-width: 100%;
+}
+
+/* Scrollbar Styling */
+.recent-searches-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.recent-searches-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.recent-searches-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Title Styling */
+.recent-searches-title {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Recent Search Items */
+.recent-searches-list {
+    display: flex;
+    gap: 15px; /* Increased spacing */
+    flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.recent-search-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    white-space: nowrap; /* Ensures text doesn't wrap */
+}
+
+/* Light Mode Styling */
+.recent-search-item {
+    color: blue; /* Blue text in light mode */
+}
+
+/* Dark Mode Styling */
+.dark-mode .recent-search-item {
+    color: white; /* White text in dark mode */
+}
+
+/* Hover Effect */
+.recent-search-item:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .recent-searches-container {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .recent-searches-list {
+        gap: 10px;
+    }
+
+    .recent-search-item {
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-searches-container {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .recent-searches-list {
+        gap: 8px;
+    }
+
+    .recent-search-item {
+        padding: 3px 6px;
+    }
+}

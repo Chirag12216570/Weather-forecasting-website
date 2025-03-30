@@ -1,0 +1,68 @@
+/* Forecast Container */
+.forecast-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Forecast Cards */
+.forecast-cards {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 15px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding-bottom: 10px;
+}
+
+/* Individual Forecast Card */
+.forecast-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 100px;
+    transition: 0.3s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    flex-shrink: 0; /* Prevents shrinking when scrolling */
+}
+
+/* Forecast Card Weather Icon */
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Horizontal Scrollbar Styling */
+.forecast-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.forecast-cards::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.forecast-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Ensure forecast stays in a row on all screen sizes */
+@media (max-width: 767px) {
+    .forecast-container {
+        justify-content: flex-start;
+    }
+
+    .forecast-cards {
+        padding: 5px 10px;
+    }
+
+    .forecast-card {
+        min-width: 90px; /* Slightly smaller cards for mobile */
+        font-size: 14px;
+    }
+}

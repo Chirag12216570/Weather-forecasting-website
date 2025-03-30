@@ -1,0 +1,173 @@
+/* Default Styles */
+.place-search-container {
+    position: relative; /* Needed for absolute positioning of suggestions */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    border-color: #0056b3;
+}
+
+.search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #007BFF;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Suggestions */
+.suggestions-container {
+    position: absolute; /* Keeps suggestions floating over cards */
+    top: 100%; /* Aligns suggestions below search bar */
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    z-index: 100; /* Ensures it stays above other elements */
+}
+
+.suggestion-card {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.suggestion-card:last-child {
+    border-bottom: none;
+}
+
+.suggestion-card:hover {
+    background-color: #f0f0f0;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Recent Searches */
+.recent-searches-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.recent-search-card {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.recent-search-card:hover {
+    background: #e2e6ea;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input {
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .search-button {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .suggestions-container {
+        width: 100%;
+    }
+}
+
+/* Dark Mode */
+.dark-mode .place-search-container {
+    color: white;
+}
+
+.dark-mode .search-input {
+    background: #333;
+    color: white;
+    border: 2px solid white;
+}
+
+.dark-mode .search-button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.dark-mode .search-button:hover {
+    background-color: #555;
+}
+
+.dark-mode .suggestions-container {
+    background: #222;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode .suggestion-card {
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode .suggestion-card:hover {
+    background: #333;
+}
+
+.dark-mode .recent-search-card {
+    background: #333;
+    border: 1px solid white;
+    color: white;
+}
+
+.dark-mode .recent-search-card:hover {
+    background: #444;
+}

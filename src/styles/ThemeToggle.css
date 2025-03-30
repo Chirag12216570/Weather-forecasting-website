@@ -1,0 +1,39 @@
+.theme-toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.theme-toggle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .search-input, 
+.dark-mode .search-button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode .search-button:hover {
+    background-color: #333;
+}
+
+.dark-mode .suggestions-container {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
