@@ -15,7 +15,7 @@ function PlaceSearch({ setSelectedPlace, updateRecentSearches }) {
         }
 
         const API_KEY = "33c3ec784454d95896e68aa69a75f279";
-        const url = `http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery}&limit=5&appid=${API_KEY}`;
+        const url = `https://api.openweathermap.org/geo/1.0/direct?q=${searchQuery}&limit=5&appid=${API_KEY}`;
 
         try {
             const response = await fetch(url);
